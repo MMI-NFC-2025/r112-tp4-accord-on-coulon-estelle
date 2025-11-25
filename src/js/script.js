@@ -12,3 +12,4 @@ details.forEach(det => {
     });
   });
 });
+

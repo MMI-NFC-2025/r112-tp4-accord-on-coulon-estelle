@@ -11,3 +11,75 @@ details:not([open]) {
     max-height: 600px;
     padding: 0 1rem;
 }
+
+.accordeon > details > summary {
+  list-style: none;
+}
+.accordeon > details > summary::marker,
+.accordeon > details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.elm-parent:body {
+  display: flex;
+
+}
+
+.elm-parent {
+width: 100px;
+overflow: hidden;
+transition: width 2s;
+
+display: flex;
+padding-left: 20px;
+position: relative;
+}
+
+.elm-parent:hover {
+width: calc(100px + 20rem);
+}
+
+.elm-parent::before {
+content: "";
+width: 0;
+height: 0;
+border: 20px solid transparent;
+border-left: 20px solid red;
+top: 0;
+left: 0;
+transition: transform 2s;
+}
+
+.elm-parent:hover::before {
+transform: rotate(90deg);
+}
+
+.contenu__text {
+flex: 0 0 20rem;
+}
+
+:root {
+      /* https://developer.chrome.com/docs/css-ui/animate-to-height-auto */
+      interpolate-size: allow-keywords;
+    }
+
+    .elm-parent {
+      /* bd+ */
+      height: 48px;
+      overflow: hidden;
+      transition: height 2s ease-in-out;
+    }
+
+    .elm-parent:hover {
+      height: auto;
+      /* height: calc-size(auto, size); */
+    }
+
+    .contenu {
+      border: 1px solid #0F0;
+    }
+
+    .contenu__text {
+      margin: 0;
+      padding: 0.5rem;
+    }
