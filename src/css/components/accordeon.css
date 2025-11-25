@@ -1,3 +1,13 @@
-/**
-* Accordeon
-*/
+details[open] {
+    overflow: hidden;
+    transition: max-height 400ms ease, padding 400ms ease;
+    max-height: 600px;
+    padding: 1rem;
+}
+
+details:not([open]) {
+    overflow: hidden;
+    transition: max-height 400ms ease, padding 400ms ease;
+    max-height: 600px;
+    padding: 0 1rem;
+}
